@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 function BeautyCard({makeup}){
     //console.log(id)
-    const [updatedLikes, setUpdatedLikes] = useState(makeup.likes)
+    const [updatedLikes, setUpdatedLikes] = useState(0)
 
     const {id, image, name, likes, price} = makeup
     //console.log(likes)

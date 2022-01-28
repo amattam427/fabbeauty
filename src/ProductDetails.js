@@ -7,7 +7,7 @@ import {useParams, useHistory, Link} from 'react-router-dom';
 import ProductReviews from './ProductReviews';
 
 
-function ProductDetails({onAddFave}){
+function ProductDetails({handleAddProduct}){
 const history = useHistory();
 const {id}= useParams();
     const [product, setProduct] = useState([]);
@@ -38,9 +38,9 @@ const {id}= useParams();
    if (!isLoaded) return <h2>Loading...</h2>;
 
    const {image, name, price, description, reviews} = product
+
     //console.log(product)
-    function handleSubmitFaves(e){
-        e.preventDefault();
+    function handleClick(){
         const name=product.name;
         const image=product.image;
         
@@ -59,9 +59,10 @@ const {id}= useParams();
             body:JSON.stringify(faveData)
         })
         .then (r=>r.json())
-        .then(data =>{
-            history.push(`/favorites`)
-        })
+        .then((addToFave)=>handleAddProduct(addToFave))
+        // .then(data =>{
+        //     history.push(`/favorites`)
+        
     }
 
     // function handleChange(e){
@@ -78,18 +79,19 @@ const {id}= useParams();
    return(
        <div className='product-detail container'>
            <div className='product-image'>
-            <img style= {imageSize} name='image' src={image} alt={name}/>
+            <img key={product.id} style= {imageSize} name='image' src={product.image} alt={product.name}/>
            </div>
 
-            <button className='faves-button' onClick={handleSubmitFaves}>Add to Favorites</button>
+            <button className='add-to-favorites' onClick={()=>history.push(handleClick)}>Add to Favorites</button>
+            {/* onClick={()=>handleAddProduct(product)} */}
             
         
            <div className='product details'>
-            <h2 name='name'>{name}</h2>
-            <p>{price}</p>
-            <p>{description}</p>
+            <h2 name='name'>{product.name}</h2>
+            <p>{product.price}</p>
+            <p>{product.description}</p>
             <h3>Reviews:</h3>
-                {reviews.map((review)=>
+                {product.reviews.map((review)=>
                     <ProductReviews key={review.id} id={review.id} comment={review.comment} />
                 )}
            

@@ -11,6 +11,7 @@ import {Route, Switch} from 'react-router-dom';
 
 function App() {
   const [makeupArray, setMakeupArray] = useState([]);
+  const [favoriteItems, setFavoriteItems] = useState([])
   
   useEffect(()=>{
     fetch('http://localhost:3000/makeup')
@@ -24,9 +25,30 @@ function App() {
       setMakeupArray(newReviewArray);
     }
 
-    function handleAddToFaves(addToFave){
-      const updatedFavoritesArray = [...makeupArray, addToFave];
-      setMakeupArray(updatedFavoritesArray)
+    // function handleAddProduct(addToFave){
+    //   const updatedFavoritesArray = [...makeupArray, addToFave];
+    //   setMakeupArray(updatedFavoritesArray)
+    // }
+
+    // const handleAddProduct = (product)=>{
+    //   const ProductExist = favoriteItems.find((item)=>item.id === product.id);
+    //   if (ProductExist){
+    //     setFavoriteItems(favoriteItems.map((item)=>item.id === product.id ?
+    //     {...ProductExist, quantity:ProductExist.quantity+1}: item)
+    //     );
+    //   } else{
+    //     setFavoriteItems([...favoriteItems,{...product, quantity:1}])
+    //   }
+    // }
+
+    // function handleAddProduct(addToFave){
+    //   const favoritesArray= favoriteItems.find((item)=>item.id === addToFave.id);
+    //   setFavoriteItems([...favoriteItems, favoritesArray]);
+    // };
+
+    function handleAddProduct(addToFave){
+      const favoritesArray = [addToFave,...favoriteItems]
+      setFavoriteItems(favoritesArray)
     }
 
     function handleDeleteFaves(deleteFave){
@@ -46,11 +68,11 @@ function App() {
         }/>
 
       <Route path='/favorites' component={
-          ()=><Favorites makeupArray={makeupArray}/>
+          ()=><Favorites handleAddProduct={handleAddProduct} onDelete={handleDeleteFaves} setFavoriteItems={setFavoriteItems} favoriteItems={favoriteItems}/>
         }/>
 
         <Route path='/makeup/:id' component={
-          ()=> <ProductDetails onAddFave={handleAddToFaves} />
+          ()=> <ProductDetails  handleAddProduct={handleAddProduct}/>
         }/>
 
         <Route exact path='/' component={
