@@ -8,7 +8,20 @@
         "category": "Face",
         "price": "$44",
         "description": "A full coverage, matte, liquid foundation. This hybrid skincare-foundation contains Charlotte Tilbury’s magic matrix of ingredients, including the groundbreaking Magic REPLEXIUM® to reduce the appearance of wrinkles. The hydrating, lightweight formula is sweat-proof, humidity-proof, waterproof, and transfer-resistant. For best results, start by applying Charlotte's Magic Cream (sold separately) to prime the skin.",
-        "reviews":"Great foundation! Love how it feels on my skin."
+        "reviews":[
+            {
+                "id":1,
+                "comment": "Love it!"
+            }, 
+            {
+              "id":2,
+              "comment": "Great foundation! Love how it feels on my skin."
+            },
+            {
+              "id":3,
+              "comment":"Looks cakey if you use too much, but if you don’t use too much it looks pretty good. Definitely full coverage!"
+            }
+        ]
       },
       {
         "id": 2,
@@ -18,7 +31,12 @@
         "category": "Face",
         "price": "$42",
         "description": "This bestselling, full-coverage, SPF 50 CC cream is an all-in-one foundation, brightening color corrector, hydrating serum, pore-less finish primer, dark spot concealer, and moisturizer. It’s offered in a range of shades that flatter multiple skin tones and deliver a natural finish.",
-        "reviews": "I love this formula and product. I have been using it for over 3 years now. It gives me a full coverage look without feeling heavy and the lasting power is amazing. Important not that even the fairest shade is very dark (in comparison to other brands colors)."
+        "reviews":[
+            {
+                "id":1,
+                "comment": "I love this formula and product. I have been using it for over 3 years now. It gives me a full coverage look without feeling heavy and the lasting power is amazing. Important not that even the fairest shade is very dark (in comparison to other brands colors)."
+            }
+        ]
       },
       {
         "id": 3,
@@ -28,7 +46,16 @@
         "category": "Face",
         "price": "$30",
         "description": "A multipurpose concealer that brightens, corrects, and perfects for up to 16 hours with a creamy medium-to-buildable coverage and natural, radiant finish. It's enriched with hydrating, multiaction skincare benefits and light-diffusing technology, that instantly obscures imperfections and diminishes fine lines and signs of fatigue. This multipurpose concealer can also be used to highlight and contour. Available in 30 shades in both standard and mini sizes.",
-        "reviews": "Best concealer I’ve ever used!! Long wearing, doesn’t crease, does have any grey tint to it and long wearing! Doesn’t patch or look cakey either. 10/10!"
+        "reviews":[
+            {
+                "id":1,
+                "comment": "This has been my favourite concealer for over a decade! It’s perfect coverage, my perfect shade and doesn’t pile or set in fine lines."
+            },
+            {
+              "id":1,
+              "comment": "Best concealer I’ve ever used!! Long wearing, doesn’t crease, does have any grey tint to it and long wearing! Doesn’t patch or look cakey either. 10/10!"
+            }
+        ]
       },
       {
         "id": 4,
@@ -38,7 +65,12 @@
         "category": "Face",
         "price": "$22",
         "description": "A silky, second-skin liquid highlighter that creates a lasting, soft, and luminous finish.Packed with light-reflecting pearl particles and a botanical blend of lotus, gardenia, and white waterlily, this multidimensional formula lends skin a dewy glow in seconds. Mix this weightless liquid highlighter with foundation or layer it across the high points of the face for instant radiance.",
-        "reviews": "Amazing and natural shine. Stayed on all day even with a mask. Definitely will become a permanent part of my collection."
+        "reviews":[
+            {
+                "id":1,
+                "comment": "Amazing and natural shine. Stayed on all day even with a mask. Definitely will become a permanent part of my collection."
+            }
+        ]
       },
       {
         "id": 5,
@@ -48,7 +80,12 @@
         "category": "Eye",
         "price": "$24",
         "description": "A vegan mascara that delivers a 35 percent increase in curl while also lengthening, volumizing, and conditioning lashes for 24-hr smudge-proof, flake-free wear. This multi-benefit mascara delivers darker, longer, thicker lashes to make your eyes appear bigger and brighter. It also conditions your lashes with olive esters, rice bran, and pro vitamin B5—it’s the ultimate lash nutrition.",
-        "reviews": "You better look for waterproof! If you have any oil production near your eyes, you will 100% end up with raccoon eyes (even with setting spray)"
+        "reviews":[
+            {
+                "id":1,
+                "comment": "You better look for waterproof! If you have any oil production near your eyes, you will 100% end up with raccoon eyes (even with setting spray)"
+            }
+        ]
       },
       {
         "id": 6,
@@ -58,7 +95,12 @@
         "category": "Eye",
         "price": "$22",
         "description": "A pro liquid liner formula that provides long-lasting, waterproof definition with an effortless flexible tip. This liquid liner is also extremely pigmented and features a super sharp, flexible felt tip for ultimate control.",
-        "reviews": "AMAZING. Stays on until you take it off. 10/10 would recommend."
+        "reviews":[
+            {
+                "id":1,
+                "comment": "AMAZING. Stays on until you take it off. 10/10 would recommend."
+            }
+        ]
       },
       {
         "id": 7,
@@ -68,7 +110,12 @@
         "category": "Lip",
         "price": "$38",
         "description": "A transfer-proof, matte liquid lip color that is ultra-pigmented with 12 hour weightless long-wear.",
-        "reviews": "I love this lipstick so much, gorgeous color and stays on so long! I love the packaging as well! The only thing is it is a little drying but it is worth it for no transfer/color pay off"
+        "reviews":[
+            {
+                "id":1,
+                "comment": "I love this lipstick so much, gorgeous color and stays on so long! I love the packaging as well! The only thing is it is a little drying but it is worth it for no transfer/color pay off"
+            }
+        ]
       },
       {
         "id": 8,
@@ -78,7 +125,12 @@
         "category": "Lip",
         "price": "$20",
         "description": "An ultimate, gotta-have-it lip gloss with explosive shine that feels as good as it looks. The non-sticky formula is super shiny, and has an addictive peach-vanilla scent you just can't get enough of.",
-        "reviews": "Such a good gloss. It is not sticky and gives a good amount of color."
+        "reviews":[
+            {
+                "id":1,
+                "comment": "Such a good gloss. It is not sticky and gives a good amount of color."
+            }
+        ]
       },
       {
         "id": 9,
@@ -88,7 +140,12 @@
         "category": "Cheek",
         "price": "$30",
         "description": "A trio of fully pigmented blushes for buildable intensity with a seamless finish. These finely-milled formulas offer seamless blending and full-pigments for buildable coverage.",
-        "reviews": "I love this blush trio!! The formula is very creamy, buildable, and blendable! The pigmentation is great and the colours really work well for me! I know I will get a beautiful result every time I use this palette! I would recommend!"
+        "reviews":[
+            {
+                "id":1,
+                "comment": "I love this blush trio!! The formula is very creamy, buildable, and blendable! The pigmentation is great and the colours really work well for me! I know I will get a beautiful result every time I use this palette! I would recommend!"
+            }
+        ]
       },
       {
         "id": 10,
@@ -98,7 +155,12 @@
         "category": "Cheek",
         "price": "$30",
         "description": "An award-winning Hoola Bronzing powder for a sunkissed glow all year round. It comes complete with a built-in mirror and powder brush. These finely-milled bronzers blend smoothly and seamlessly.",
-        "reviews":"I love this bronzer and I found it really easy to use even as a beginner."
+        "reviews":[
+            {
+                "id":1,
+                "comment": "I love this bronzer and I found it really easy to use even as a beginner."
+            }
+        ]
       }
      
     ]

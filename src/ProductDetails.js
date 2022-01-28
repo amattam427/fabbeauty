@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
 import {useParams, useHistory, Link} from 'react-router-dom';
+import NewReviewForm from './NewReviewForm';
 
-//import ProductReviews from './ProductReviews';
+import ProductReviews from './ProductReviews';
 
 
-function ProductDetails(){
+function ProductDetails({addReview}){
     const [product, setProduct] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
@@ -30,21 +31,29 @@ function ProductDetails(){
    if (!isLoaded) return <h2>Loading...</h2>;
 
    const {image, name, price, description, reviews} = product
-   //since reviews is an object we need to create another componenet for it
-   console.log(product)
+    //console.log(product)
+
+  
+
+
+
    return(
        <div className='product-detail container'>
            <div className='product-image'>
             <img style= {imageSize} src={image} alt={name}/>
            </div>
+           <button>Add to Favorites</button>
            <div className='product details'>
             <h2>{name}</h2>
             <p>{price}</p>
             <p>{description}</p>
             <h3>Reviews:</h3>
             <ul className='reviews'>
-                <li>{reviews}</li>
+                {reviews.map((review)=>
+                    <ProductReviews key={review.id} id={review.id} comment={review.comment} />
+                )}
             </ul>
+            <NewReviewForm/>
            </div>
            <div className='reviews container'>
            </div>
