@@ -1,31 +1,35 @@
 import React ,{useState} from 'react';
-import Search from './Search';
 import FilterList from './FilterList';
-import BeautyList from './BeautyList';
+import BeautyCard from './BeautyCard';
+
 
 
 
 function BeautyPage({makeupArray}){
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('')
     const [selectedCategory, setSelectedCategory]= useState('All')
 
+
     const filteredMakeup = makeupArray
-        .filter((makeup)=>
-            makeup.name.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-        .filter((makeup)=>{
+      .filter((makeup)=>{
             if(selectedCategory === 'All') {
                 return true
             }else{
             return makeup.category === selectedCategory;
             }
         })
+      .filter((makeup)=>{
+        return makeup.name.toLowerCase().includes(searchTerm.toLowerCase());
+    })
+      .map((makeup)=>{
+          return <BeautyCard key={makeup.id} makeup={makeup}/>
+      });
+    
         
         return(
             <main>
-                <Search setSearchTerm={setSearchTerm}/>
-                <FilterList setSelectedCategory={setSelectedCategory}/>
-                <BeautyList makeupList={filteredMakeup}/>
+                <FilterList setSelectedCategory={setSelectedCategory} setSearchTerm={setSearchTerm}/>
+                <ul style={{listStyleType:'none'}} className='makeup cards'>{filteredMakeup}</ul>
             </main>
         )
         

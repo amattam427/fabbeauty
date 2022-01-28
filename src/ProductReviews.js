@@ -1,11 +1,14 @@
   
 import React from 'react';
 
-function ProductReviews({id, comment}){
+
+function ProductReviews({id, comment, onAddReview}){
     return(
-        <li className='reviews'>
-            <p>{comment}</p>
-        </li>
+        <ul className='reviews'>
+            <li className='reviews'>
+                <p>{comment}</p>
+            </li>
+        </ul>
     )
   
 

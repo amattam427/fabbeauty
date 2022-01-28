@@ -52,7 +52,7 @@
           "comment": "This has been my favourite concealer for over a decade! It’s perfect coverage, my perfect shade and doesn’t pile or set in fine lines."
         },
         {
-          "id": 1,
+          "id": 2,
           "comment": "Best concealer I’ve ever used!! Long wearing, doesn’t crease, does have any grey tint to it and long wearing! Doesn’t patch or look cakey either. 10/10!"
         }
       ]
@@ -163,76 +163,9 @@
       ]
     },
     {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
       "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
+      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
       "id": 11
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 12
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 13
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 14
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 15
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 16
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 17
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 18
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 19
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 20
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 21
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 22
-    },
-    {
-      "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981",
-      "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-      "id": 23
-    },
-    {
-      "product": {
-        "name": "Airbrush Flawless Longwear Foundation by Charlotte Tilbury",
-        "image": "https://ik.imagekit.io/vonlhgv94ld/charlotteair_Gb77Uz4o1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1643298719981"
-      },
-      "id": 24
     }
   ]
 }

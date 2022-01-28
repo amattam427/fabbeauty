@@ -2,9 +2,11 @@ import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
 
 
-function BeautyCard({id, name, image, likes, price}){
+function BeautyCard({makeup}){
     //console.log(id)
-    const [updatedLikes, setUpdatedLikes] = useState({likes})
+    const [updatedLikes, setUpdatedLikes] = useState(makeup.likes)
+
+    const {id, image, name, likes, price} = makeup
     //console.log(likes)
     const imageSize={
        width:'135px',

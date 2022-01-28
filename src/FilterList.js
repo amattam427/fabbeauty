@@ -1,11 +1,24 @@
 import React from 'react';
 
-function FilterList({setSelectedCategory}){
+function FilterList({setSelectedCategory, setSearchTerm}){
     function handleFilterChange(e){
         setSelectedCategory(e.target.value)
     }
 
+    function handleSearch(e){
+        
+      setSearchTerm(e.target.value)
+  }
+
     return(
+        <>
+        <input
+          style={{width:'200px'}}
+          type='text'
+          id='search'
+          placeholder='Search for brand or name...'
+          onChange={handleSearch}/>
+
         <div className="Filter">
         <select name="filter" onChange={handleFilterChange}>
           <option value="All">Filter by category</option>
@@ -15,6 +28,8 @@ function FilterList({setSelectedCategory}){
           <option value="Cheek">Cheek</option>
         </select>
       </div>
+      </>
+      
     )
 
 }
