@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import {useParams, useHistory, Link} from 'react-router-dom';
 
-import ProductReviews from './ProductReviews';
+//import ProductReviews from './ProductReviews';
 
 
 function ProductDetails(){
@@ -43,9 +43,7 @@ function ProductDetails(){
             <p>{description}</p>
             <h3>Reviews:</h3>
             <ul className='reviews'>
-                {reviews.map((review)=>
-                    <ProductReviews key={review.id} id={review.id} comment={review.comment} />
-                )}
+                <li>{reviews}</li>
             </ul>
            </div>
            <div className='reviews container'>
