@@ -10,6 +10,7 @@ import {Route, Switch} from 'react-router-dom';
 
 function App() {
   const [makeupArray, setMakeupArray] = useState([]);
+  //const [favoritesArray, setFavoritesArray] = useState([])
 
   useEffect(()=>{
     fetch('http://localhost:3000/makeup')
@@ -19,9 +20,19 @@ function App() {
     })
 }, [])
 
-    function handleAddReview(newReview) {
-      const newReviewArray = [newReview, ...makeupArray];
-      setMakeupArray(newReviewArray);
+    // function handleAddReview(newReview) {
+    //   const newReviewArray = [newReview, ...makeupArray];
+    //   setMakeupArray(newReviewArray);
+    // }
+
+    function handleAddToFaves(addToFave){
+      const updatedFavoritesArray = [...makeupArray, addToFave];
+      setMakeupArray(updatedFavoritesArray)
+    }
+
+    function handleDeleteFaves(deleteFave){
+      const deleteFavoritesArray = makeupArray.filter((faves)=>faves.id !== deleteFave.id);
+      setMakeupArray(deleteFavoritesArray)
     }
 
   return (
@@ -29,12 +40,12 @@ function App() {
       <Header/>
       <NavBar/>
       <Switch>
-        <Route path='/makeup/:id' component={
-          ()=> <ProductDetails addReview={handleAddReview}/>
+      <Route path='/favorites' component={
+          ()=><Favorites onDeleteFave={handleDeleteFaves}/>
         }/>
 
-        <Route path='/makeup/favorites' component={
-          ()=><Favorites makeupArray={makeupArray}/>
+        <Route path='/makeup/:id' component={
+          ()=> <ProductDetails onAddFave={handleAddToFaves} />
         }/>
 
         <Route exact path='/' component={

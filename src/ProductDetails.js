@@ -6,7 +6,7 @@ import NewReviewForm from './NewReviewForm';
 import ProductReviews from './ProductReviews';
 
 
-function ProductDetails({addReview}){
+function ProductDetails({onAddFave}){
     const [product, setProduct] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
@@ -32,6 +32,24 @@ function ProductDetails({addReview}){
 
    const {image, name, price, description, reviews} = product
     //console.log(product)
+    function handleFavesClick(){
+        // let image=product.image;
+        // let name=product.name;
+
+
+        const favesData={
+           product:{name, image}
+        }
+        fetch(`http://localhost:3000/makeup`,{
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json',
+            },
+            body:JSON.stringify(favesData)
+        })
+        .then ((r)=>r.json())
+        .then((addToFave)=>onAddFave(addToFave))
+    }
 
   
 
@@ -42,7 +60,9 @@ function ProductDetails({addReview}){
            <div className='product-image'>
             <img style= {imageSize} src={image} alt={name}/>
            </div>
-           <button>Add to Favorites</button>
+            <Link to={'/favorites'}>
+                <button className='faves-button' onClick={handleFavesClick}>Add to Favorites</button>
+            </Link>
            <div className='product details'>
             <h2>{name}</h2>
             <p>{price}</p>
