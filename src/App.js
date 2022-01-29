@@ -25,6 +25,13 @@ function App() {
       setMakeupArray(newReviewArray);
     }
 
+    function handleUpdateMakeup(updatedMakeup){
+      const updateMakeup = makeupArray.map((makeup)=>
+      makeup.id === updatedMakeup.id ? updatedMakeup : makeup
+      );
+      setMakeupArray(updateMakeup);
+    }
+
     // function handleAddProduct(addToFave){
     //   const updatedFavoritesArray = [...makeupArray, addToFave];
     //   setMakeupArray(updatedFavoritesArray)
@@ -41,10 +48,10 @@ function App() {
       setMakeupArray(updatedProductsArray)
     }
 
-    function handleDeleteFaves(deleteFave){
-      const deleteFavoritesArray = makeupArray.filter((faves)=>faves.id !== deleteFave.id);
-      setMakeupArray(deleteFavoritesArray)
-    }
+    // function handleDeleteFaves(deleteFave){
+    //   const deleteFavoritesArray = makeupArray.filter((faves)=>faves.id !== deleteFave.id);
+    //   setMakeupArray(deleteFavoritesArray)
+    // }
 
   return (
     <div className="container">
@@ -66,7 +73,7 @@ function App() {
         }/>
 
         <Route exact path='/' component={
-           ()=> <BeautyPage makeupArray={makeupArray}/>
+           ()=> <BeautyPage makeupArray={makeupArray} onUpdateMakeup={handleUpdateMakeup}/>
         }/>
       </Switch>
         

@@ -5,7 +5,7 @@ import BeautyCard from './BeautyCard';
 
 
 
-function BeautyPage({makeupArray}){
+function BeautyPage({makeupArray, onUpdateMakeup}){
     const [searchTerm, setSearchTerm] = useState('')
     const [selectedCategory, setSelectedCategory]= useState('All')
 
@@ -22,7 +22,7 @@ function BeautyPage({makeupArray}){
         return makeup.name.toLowerCase().includes(searchTerm.toLowerCase());
     })
       .map((makeup)=>{
-          return <BeautyCard key={makeup.id} makeup={makeup}/>
+          return <BeautyCard key={makeup.id} makeup={makeup} onUpdateMakeup={onUpdateMakeup}/>
       });
     
         

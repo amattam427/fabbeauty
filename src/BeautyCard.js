@@ -1,12 +1,14 @@
-import React,{useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom'
 
 
-function BeautyCard({makeup}){
-    //console.log(id)
-    const [updatedLikes, setUpdatedLikes] = useState(0)
-
+function BeautyCard({makeup, onUpdateMakeup}){
     const {id, image, name, likes, price} = makeup
+
+    //console.log(id)
+    
+
+   
     //console.log(likes)
     const imageSize={
        width:'135px',
@@ -14,7 +16,21 @@ function BeautyCard({makeup}){
     }
 
     function handleLikes(){
-        setUpdatedLikes(updatedLikes + 1)
+        const updateLikesObj = {
+            likes:makeup.likes + 1,
+        };
+
+        fetch(` http://localhost:3000/makeup/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updateLikesObj),
+        })
+            .then((r)=> r.json())
+            .then(onUpdateMakeup)
+
+        
     }
 
   
