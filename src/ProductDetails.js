@@ -12,9 +12,9 @@ const history = useHistory();
 const {id}= useParams();
     const [product, setProduct] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
-    // const [faveData, setFaveData] = useState({
-    //     product:{name:'name', image:'image'}
-    // });
+    const [faveData, setFaveData] = useState({
+        product:{name:'name', image:'image'}
+    });
 
 
     const imageSize={
@@ -22,8 +22,7 @@ const {id}= useParams();
         height: '350px' 
      }
 
-//    const history = useHistory();
-//    const {id}= useParams();
+
    //useParams is used to access a key value pair --> in this case we want it to match with the id key we have in our data
    useEffect(()=>{
        fetch (`http://localhost:3000/makeup/${id}`)
@@ -65,12 +64,12 @@ const {id}= useParams();
         
     }
 
-    // function handleChange(e){
-    //     setFaveData({
-    //         ...faveData,
-    //         [e.target.name]:e.target.value
-    //     })
-    // }
+    function handleChange(e){
+        setFaveData({
+            ...faveData,
+            [e.target.name]:e.target.value
+        })
+    }
 
   
 
@@ -82,7 +81,7 @@ const {id}= useParams();
             <img key={product.id} style= {imageSize} name='image' src={product.image} alt={product.name}/>
            </div>
 
-            <button className='add-to-favorites' onClick={()=>history.push(handleClick)}>Add to Favorites</button>
+            {/* <button className='add-to-favorites' onChange={handleChange} onClick={()=>history.push(handleClick)}>Add to Favorites</button> */}
             {/* onClick={()=>handleAddProduct(product)} */}
             
         

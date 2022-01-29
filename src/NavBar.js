@@ -6,10 +6,11 @@ function NavBar(){
         display: "inline-block",
         width: "50px",
         padding: "12px",
-        margin: "0 500px 6px",
+        margin: "0 600px 6px",
         background: "lavender",
         color: 'magenta',
-        fontFamily: 'arial'
+        fontFamily: 'arial', 
+        textAlign: 'center'
     };
 
     return(
@@ -18,6 +19,12 @@ function NavBar(){
             exact
             style={navStyles}>
                 Home
+            </NavLink>
+
+            <NavLink to='/newform'
+            exact
+            style={navStyles}>
+                Add a New Product
             </NavLink>
         </div>
     )

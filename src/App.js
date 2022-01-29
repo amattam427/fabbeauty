@@ -4,14 +4,14 @@ import BeautyPage from './BeautyPage';
 import ProductDetails from './ProductDetails';
 import NavBar from './NavBar';
 import ProductReviews from './ProductReviews'
-import Favorites from './Favorites';
+import AddNewProduct from './AddNewProduct';
 
 
 import {Route, Switch} from 'react-router-dom';
 
 function App() {
   const [makeupArray, setMakeupArray] = useState([]);
-  const [favoriteItems, setFavoriteItems] = useState([])
+ 
   
   useEffect(()=>{
     fetch('http://localhost:3000/makeup')
@@ -30,25 +30,15 @@ function App() {
     //   setMakeupArray(updatedFavoritesArray)
     // }
 
-    // const handleAddProduct = (product)=>{
-    //   const ProductExist = favoriteItems.find((item)=>item.id === product.id);
-    //   if (ProductExist){
-    //     setFavoriteItems(favoriteItems.map((item)=>item.id === product.id ?
-    //     {...ProductExist, quantity:ProductExist.quantity+1}: item)
-    //     );
-    //   } else{
-    //     setFavoriteItems([...favoriteItems,{...product, quantity:1}])
-    //   }
-    // }
 
     // function handleAddProduct(addToFave){
     //   const favoritesArray= favoriteItems.find((item)=>item.id === addToFave.id);
     //   setFavoriteItems([...favoriteItems, favoritesArray]);
     // };
 
-    function handleAddProduct(addToFave){
-      const favoritesArray = [addToFave,...favoriteItems]
-      setFavoriteItems(favoritesArray)
+    function handleAddProduct(addToForm){
+      const updatedProductsArray = [addToForm,...makeupArray]
+      setMakeupArray(updatedProductsArray)
     }
 
     function handleDeleteFaves(deleteFave){
@@ -57,7 +47,7 @@ function App() {
     }
 
   return (
-    <div className="app">
+    <div className="container">
       <Header/>
 
       <NavBar/>
@@ -67,8 +57,8 @@ function App() {
           ()=><ProductReviews onAddReview={handleAddReview}/>
         }/>
 
-      <Route path='/favorites' component={
-          ()=><Favorites handleAddProduct={handleAddProduct} onDelete={handleDeleteFaves} setFavoriteItems={setFavoriteItems} favoriteItems={favoriteItems}/>
+      <Route path='/newform' component={
+          ()=><AddNewProduct handleAddProduct={handleAddProduct}  />
         }/>
 
         <Route path='/makeup/:id' component={
